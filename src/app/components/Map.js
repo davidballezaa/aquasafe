@@ -1,8 +1,10 @@
 "use client"
 
 import Globe from "react-globe.gl"
+import { useRouter } from "next/navigation";
 
 export default function Map() {
+    const router = useRouter();
     const myData = [{
         "lat": 25,
         "lng": -100,
@@ -18,10 +20,10 @@ export default function Map() {
             height={500}
             labelsData={myData}
             labelText="label"
-            labelColor={label => label.color}
+            labelColor={(pin) => pin.color}
             labelSize={0.5}
             labelDotRadius={1}
-            onLabelClick={(label) => console.log(label)}
+            onLabelClick={(pin) => router.push(`/detail/${pin.id}`)}
         />
     )
 }
