@@ -10,7 +10,7 @@ export default function Map() {
         "lng": -100,
         "id": 1,
         "label": "Hola",
-        "color": "red" // status == contaminado ? red : green
+        "color": "red"
     }];
     return (
         <Globe 
