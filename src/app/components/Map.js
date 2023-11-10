@@ -1,19 +1,21 @@
-"use client"
+'use client';
 
-import Globe from "react-globe.gl"
-import { useRouter } from "next/navigation";
+import Globe from 'react-globe.gl';
+import { useRouter } from 'next/navigation';
 
 export default function Map() {
     const router = useRouter();
-    const myData = [{
-        "lat": 25,
-        "lng": -100,
-        "id": 1,
-        "label": "Hola",
-        "color": "red"
-    }];
+    const myData = [
+        {
+            lat: 25,
+            lng: -100,
+            id: 1,
+            label: 'Hola',
+            color: 'red',
+        },
+    ];
     return (
-        <Globe 
+        <Globe
             backgroundColor="white"
             globeImageUrl="//unpkg.com/three-globe@2.30.0/example/img/earth-blue-marble.jpg"
             width={500}
@@ -25,5 +27,5 @@ export default function Map() {
             labelDotRadius={1}
             onLabelClick={(pin) => router.push(`/detail/${pin.id}`)}
         />
-    )
+    );
 }
