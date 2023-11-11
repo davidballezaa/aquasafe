@@ -3,11 +3,11 @@ import Link from 'next/link';
 const Header = () => {
     return (
         <header>
-            <nav class="border-2 border-rose-500">
-                <ul class="flex justify-center space-x-4">
+            <nav className="border-2 border-rose-500">
+                <ul className="flex justify-center space-x-4">
                     <li>
                         <Link
-                            class="flex space-x-1 border-2 border-rose-500"
+                            className="flex space-x-1 border-2 border-rose-500"
                             href="/"
                         >
                             <div>Home</div>
@@ -29,7 +29,7 @@ const Header = () => {
                     </li>
                     <li>
                         <Link
-                            class="flex space-x-1 border-2 border-rose-500"
+                            className="flex space-x-1 border-2 border-rose-500"
                             href="/about"
                         >
                             <div>About</div>
