@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer class="border-2 border-rose-500 flex items-end">
+    <footer className="border-2 border-rose-500 flex items-end">
       <p>AquaSafe</p>
       <Image
         src="/AquaSafeLogoTransparentBackground.png"
