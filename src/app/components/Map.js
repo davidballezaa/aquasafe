@@ -14,11 +14,11 @@ export default function Map() {
             .then((pins) => {
                 const newData = pins?.data.map((pin) => {
                     return {
-                        id: pin.id,
+                        id: pin.id_Aquasafe,
                         lat: pin.latitud,
                         lng: pin.longitud,
                         label: '',
-                        color: pin.status === 'contaminado' ? 'red' : 'green',
+                        color: pin.estado == 'potable' ? 'green' : 'red',
                     };
                 });
                 setData(newData);
