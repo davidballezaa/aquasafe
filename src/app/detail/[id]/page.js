@@ -3,16 +3,6 @@ import { useEffect, useState } from 'react';
 
 import Graph from './components/graph';
 
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-} from 'recharts';
-
 export default function Home({ params }) {
     const [data, setData] = useState([]);
 
@@ -21,9 +11,20 @@ export default function Home({ params }) {
             .then((res) => res.json())
             .then((pins) => {
                 const newData = pins?.data.map((pin) => {
+                    const formattedDate = new Date(pin.fecha).toLocaleString(
+                        'es-MX',
+                        {
+                            day: '2-digit',
+                            month: '2-digit',
+                            year: '2-digit',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            hour12: false,
+                        }
+                    );
                     return {
                         // id: pin.id_Aquasafe,
-                        date: pin.fecha,
+                        date: formattedDate,
                         ir: pin.lectura_ir,
                         ph: pin.lectura_ph,
                         temp: pin.lectura_temp,
