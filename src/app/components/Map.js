@@ -2,11 +2,13 @@
 
 import Globe from 'react-globe.gl';
 import { useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Map() {
     const router = useRouter();
     const [data, setData] = useState([]);
+
+    const globeRef = useRef();
 
     useEffect(() => {
         fetch('/api/map')
@@ -25,9 +27,15 @@ export default function Map() {
             });
     }, []);
 
+    useEffect(() => {
+        const MAP_CENTER = { lat: 25, lng: -100, altitude: 1.5 };
+        globeRef.current.pointOfView(MAP_CENTER, 0);
+    }, [globeRef]);
+
     return (
         <>
             <Globe
+                ref={globeRef}
                 backgroundColor="white"
                 globeImageUrl="//unpkg.com/three-globe@2.30.0/example/img/earth-blue-marble.jpg"
                 width={500}
