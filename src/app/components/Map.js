@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import HEX_DATA from '../data/countries_hex_data.json';
 
-export default function Map() {
+export default function Map({ filter }) {
     const router = useRouter();
     const [data, setData] = useState([]);
 
@@ -35,6 +35,8 @@ export default function Map() {
         globeRef.current.pointOfView(MAP_CENTER, 0);
     }, [globeRef]);
 
+    const filteredData = data.filter((pin) => pin.color == filter);
+
     return (
         <>
             <Globe
@@ -46,7 +48,7 @@ export default function Map() {
                 hexPolygonResolution={3}
                 hexPolygonMargin={0.62}
                 hexPolygonColor={useCallback(() => '#1b66b1', [])}
-                labelsData={data}
+                labelsData={filter ? filteredData : data}
                 labelAltitude={0.005}
                 labelText="label"
                 labelColor={(pin) => pin.color}
