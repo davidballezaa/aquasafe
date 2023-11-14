@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={inter.className}>
                 <Header />
-                {children}
+                <div className="h-100 grow box-decoration-slice bg-gradient-to-r from-slate-700 to-slate-900">{children}</div>
                 <Footer />
             </body>
         </html>
