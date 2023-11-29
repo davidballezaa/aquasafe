@@ -23,11 +23,12 @@ export default function Home({ params }) {
                         }
                     );
                     return {
-                        // id: pin.id_Aquasafe,
+                        id: pin.id_Aquasafe,
                         date: formattedDate,
                         ir: pin.lectura_ir,
                         ph: pin.lectura_ph,
                         temp: pin.lectura_temp,
+                        dir: pin.direccion,
                         // lat: pin.latitud,
                         // lng: pin.longitud,
                         // color: pin.estado == 'potable' ? 'green' : 'red',
@@ -37,14 +38,31 @@ export default function Home({ params }) {
             });
     }, []);
 
+    console.log(data);
+
     return (
-        <main>
+        <main className="flex flex-col items-center">
             {data && (
-                <div className="graphs">
-                    <Graph data={data} attribute={'ir'} color={'#FF0000'} />
-                    <Graph data={data} attribute={'ph'} color={'#00FF00'} />
-                    <Graph data={data} attribute={'temp'} color={'#0000FF'} />
-                </div>
+                <>
+                    <div className="info mb-4 text-center">
+                        <h2 className="text-white text-lg">
+                            Has seleccionado el{' '}
+                            <span className="text-blue-400">aquasafe</span> con
+                            id: {data[0]?.id}
+                        </h2>
+
+                        <p className="text-white">Direccion: {data[0]?.dir}</p>
+                    </div>
+                    <div className="graphs">
+                        <Graph data={data} attribute={'ir'} color={'#FF0000'} />
+                        <Graph data={data} attribute={'ph'} color={'#00FF00'} />
+                        <Graph
+                            data={data}
+                            attribute={'temp'}
+                            color={'#0000FF'}
+                        />
+                    </div>
+                </>
             )}
         </main>
     );
