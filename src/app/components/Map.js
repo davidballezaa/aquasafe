@@ -23,7 +23,7 @@ export default function Map({ filter }) {
                         lat: pin.latitud,
                         lng: pin.longitud,
                         label: '',
-                        color: pin.estado == 'potable' ? 'green' : 'red',
+                        color: pin.estado == '0' ? 'green' : 'red',
                     };
                 });
                 setData(newData);
