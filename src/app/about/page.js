@@ -2,7 +2,7 @@ import Image from 'next/image';
 export default function Home() {
     return (
         <main>
-            <div className="flex justify-center space-x-4 font-bold text-2xl text-justify m-5">
+            <div className="flex justify-center space-x-4 font-bold text-2xl text-justify m-5 text-white">
                 <p>¿Que es AquaSafe?</p>
             </div>
             <div className="flex justify-center box-decoration-slice bg-gradient-to-r from-slate-700 to-slate-900 m-5">
@@ -13,7 +13,7 @@ export default function Home() {
                     height="400"
                 />
             </div>
-            <div className="flex justify-center space-x-4 pr-40 pl-40 text-justify m-5">
+            <div className="flex justify-center space-x-4 pr-40 pl-40 text-justify m-5 text-white">
                 <div>
                     El proyecto se llama “AquaSafe” y se enfoca en medir la
                     potabilidad del agua en comunidades marginadas mediante un
@@ -32,12 +32,12 @@ export default function Home() {
                     salubridad.
                 </div>
             </div>
-            <div className="flex justify-center font-bold text-2xl text-justify m-5">
+            <div className="flex justify-center font-bold text-2xl text-justify m-5 text-white">
                 <div></div>
                 <p>¿Como se elaboro este proyecto?</p>
                 <div></div>
             </div>
-            <div className="flex justify-center space-x-40 text-justify m-5">
+            <div className="flex justify-center space-x-40 text-justify m-5 text-white">
                 <div></div>
                 <p>
                     Se ha creado un prototipo en Tinkercad simulando las
@@ -60,12 +60,12 @@ export default function Home() {
                     />
                 </footer>
             </div>
-            <div className="flex justify-center font-bold text-2xl text-justify m-5">
+            <div className="flex justify-center font-bold text-2xl text-justify m-5 text-white">
                 <div></div>
                 <p>Uso de Sensores</p>
                 <div></div>
             </div>
-            <div className="flex justify-center space-x-40 text-justify m-5">
+            <div className="flex justify-center space-x-40 text-justify m-5 text-white">
                 <div></div>
                 <div>
                     Como se explicó anteriormente, en este prototipo se usó un
@@ -82,12 +82,12 @@ export default function Home() {
                 </div>
                 <div></div>
             </div>
-            <div className="flex justify-center font-bold text-2xl text-justify m-5">
+            <div className="flex justify-center font-bold text-2xl text-justify m-5 text-white">
                 <div></div>
                 <p>Nuestro Diagrama</p>
                 <div></div>
             </div>
-            <div className="flex justify-center space-x-40 text-justify m-5">
+            <div className="flex justify-center space-x-40 text-justify m-5 text-white">
                 <div></div>
                 <p>
                     Como se puede apreciar, en este diagrama se puede apreciar

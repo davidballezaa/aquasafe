@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Header = () => {
     return (
-        <header className="flex justify-center box-decoration-slice bg-gradient-to-r from-slate-700 to-slate-900">
+        <header className="flex justify-center box-decoration-slice bg-gradient-to-r from-slate-700 to-slate-900 text-white">
             <div className="w-1/6 flex justify-center items-center ">
                 <Image
                     src="/AquaSafeLogoTransparentBackground.png"
