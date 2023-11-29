@@ -15,7 +15,7 @@ export default function Home() {
                 <div className="flex flex-row space-x-2">
                     <p className="text-white">Filtrar: </p>
                     <select
-                        className="bg-slate-900"
+                        className="bg-slate-900 text-white"
                         onChange={handleFilterChange}
                         value={filter}
                     >
